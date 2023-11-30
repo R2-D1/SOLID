@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/styles/index.css">
 </head>
-<body>
-    <main class="main">
-        {% include "nav.html" %}
-        <h1>{{title}}</h1>
-        {{content}}
+<body class="page__body">
+    {% include "nav.html" %}
+   <main class="main">
+        <div class="container">
+            <h1>{{title}}</h1>
+            {{content}}
+        </div>
     </main>
 </body>
 </html>

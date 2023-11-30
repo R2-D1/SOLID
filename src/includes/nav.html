@@ -1,9 +1,9 @@
-<nav>
-    <ul>
-        <li><a href="/s">S</a></li>
-        <li><a href="/o">O</a></li>
-        <li><a href="/l">L</a></li>
-        <li><a href="/i">I</a></li>
-        <li><a href="/d">D</a></li>
+<nav class="nav container">
+    <ul class="nav__list">
+        <li class="nav__item {% if '/s/' == page.url %}nav__item_active{% endif %}"><a class="nav__link" href="/s">S</a></li>
+        <li class="nav__item {% if '/o/' == page.url %}nav__item_active{% endif %}"><a class="nav__link" href="/o">O</a></li>
+        <li class="nav__item {% if '/l/' == page.url %}nav__item_active{% endif %}"><a class="nav__link" href="/l">L</a></li>
+        <li class="nav__item {% if '/i/' == page.url %}nav__item_active{% endif %}"><a class="nav__link" href="/i">I</a></li>
+        <li class="nav__item {% if '/d/' == page.url %}nav__item_active{% endif %}"><a class="nav__link" href="/d">D</a></li>
     </ul>
 </nav>
