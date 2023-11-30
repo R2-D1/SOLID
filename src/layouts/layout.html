@@ -11,11 +11,15 @@
 </head>
 <body class="page__body">
     {% include "nav.html" %}
-   <main class="main">
-        <div class="container">
+   <main class="page__content container">
+       <aside class="page__aside">
+           <h4 class="page__aside-title">ЗМІСТ</h4>
+           {{ content | toc }}
+       </aside>
+        <article class="page__article">
             <h1>{{title}}</h1>
             {{content}}
-        </div>
+        </article>
     </main>
 </body>
 </html>
