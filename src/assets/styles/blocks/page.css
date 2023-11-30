@@ -1,12 +1,21 @@
+.page,
 .page__body {
+    height: 100%;
+}
+
+.page__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
     background-color: #000;
     color: #fff;
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .page__content {
     display: flex;
+    margin-bottom: auto;
 }
 
 .page__aside {
@@ -20,4 +29,17 @@
 
 .page__article {
     flex: 1;
+    padding-bottom: 40px;
+}
+
+.page__footer {
+    background-color:  var(--primary-color);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.github {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
