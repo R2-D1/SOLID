@@ -1,7 +1,10 @@
+@import url("./global.css");
 @import url("./colors.css");
 @import url("./fonts.css");
 @import url("./box-model.css");
 @import url("blocks/page.css");
 @import url("blocks/container.css");
 @import url("blocks/nav.css");
+@import url("blocks/sidebar.css");
 @import url("blocks/content-table.css");
+@import url("blocks/footer.css");

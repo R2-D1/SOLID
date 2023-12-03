@@ -10,7 +10,9 @@
     margin: 0;
     background-color: #000;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
 }
 
 .page__content {
@@ -18,28 +20,12 @@
     margin-bottom: auto;
 }
 
-.page__aside {
-    width: 250px;
+.page__sidebar {
+    width: 300px;
     margin-right: 40px;
-}
-
-.page__aside-title {
-    font-family: AKONY, Arial, sans-serif;
 }
 
 .page__article {
     flex: 1;
     padding-bottom: 40px;
-}
-
-.page__footer {
-    background-color:  var(--primary-color);
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.github {
-    color: var(--secondary-color);
-    text-decoration: none;
 }

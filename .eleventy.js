@@ -1,6 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTOC = require('eleventy-plugin-toc');
 const markdownItAnchor = require("markdown-it-anchor");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
 
@@ -22,6 +23,26 @@ module.exports = function(eleventyConfig) {
             level: [1,2,3,4],
             slugify: eleventyConfig.getFilter("slugify")
         });
+    });
+
+    // Add responsive image shortcode
+    eleventyConfig.addShortcode("responsiveImage", async (src, alt, style) => {
+        let metadata = await Image(`./src/assets/images/${src}`, {
+            widths: [300, 860],
+            formats: ["webp", "jpeg", "jpg"],
+            urlPath: "./assets/images/",
+            outputDir: "./dist/assets/images/",
+        });
+
+        let imageAttributes = {
+            alt,
+            style,
+            sizes: "(min-width: 30em) 50vw, 100vw",
+            loading: "lazy",
+            decoding: "async",
+        };
+
+        return Image.generateHTML(metadata, imageAttributes);
     });
 
     return {
