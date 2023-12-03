@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css"
+          integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/assets/styles/index.css">
 </head>
 <body class="page__body">
-    <nav class="nav container">
+<nav class="nav container">
     <ul class="nav__list">
         <li class="nav__item nav__item_active"><a class="nav__link" href="/s">S</a></li>
         <li class="nav__item "><a class="nav__link" href="/o">O</a></li>
@@ -20,12 +22,30 @@
     </ul>
 </nav>
 
-   <main class="main">
-        <div class="container">
-            <h1>Single responsibility principle</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis</p>
+<main class="page__content container">
+    <aside class="page__sidebar sidebar">
+   <div class="sidebar__content">
+       <h4 class="sidebar__title">ЗМІСТ</h4>
+       
+   </div>
+</aside>
 
+    <article class="page__article">
+        <h1>Single responsibility principle</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis</p>
+
+    </article>
+</main>
+<footer class="page__footer footer">
+    <div class="container footer__container">
+        <a href="https://github.com/R2-D1/SOLID" class="github" target="_blank">
+            <img class="github__logo" width="35" height="35" src="/assets/images/icons/github.svg" alt="github">
+        </a>
+        <div class="footer__eleventy">
+            Працює на <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>
         </div>
-    </main>
+    </div>
+</footer>
+
 </body>
 </html>

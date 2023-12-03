@@ -1,0 +1,26 @@
+.toc {
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.toc a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toc li {
+    margin-bottom: 10px;
+}
+
+.toc ol {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.toc > ol {
+    padding-left: 0;
+}
+
+.toc a + ol {
+    margin-top: 5px;
+}

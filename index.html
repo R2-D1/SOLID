@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css" integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-atom-dark.min.css"
+          integrity="sha512-GZPS1oCebjx8g/ZkrTTvWirW+4wDkzIsilUQPXcZzuDpDzoH5brM2AojiFjo6ObIWeM68ZDostvdjaS9MNYCTg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="/assets/styles/index.css">
 </head>
 <body class="page__body">
-    <nav class="nav container">
+<nav class="nav container">
     <ul class="nav__list">
         <li class="nav__item "><a class="nav__link" href="/s">S</a></li>
         <li class="nav__item "><a class="nav__link" href="/o">O</a></li>
@@ -20,15 +22,61 @@
     </ul>
 </nav>
 
-   <main class="main">
-        <div class="container">
-            <h1>SOLID</h1>
-            <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span></code></pre>
+<main class="page__content container">
+    <aside class="page__sidebar sidebar">
+   <div class="sidebar__content">
+       <h4 class="sidebar__title">ЗМІСТ</h4>
+       <nav class="toc" >
+        <ol><li><a href="#osnovni-princzipi">Основні Принципи</a><ol><li><a href="#s-princzip-yedinoyi-vidpovidalnosti">S - Принцип єдиної відповідальності</a></li><li><a href="#o-princzip-vidkritosti-zakritosti">O - Принцип відкритості/закритості</a></li><li><a href="#l-princzip-pidstanovki-liskov">L - Принцип підстановки Лісков</a></li><li><a href="#i-princzip-segregacziyi-interfejsiv">I - Принцип сегрегації інтерфейсів</a></li><li><a href="#d-princzip-inversiyi-zalezhnostej">D - Принцип інверсії залежностей</a></li></ol></li><li><a href="#istoriya-viniknennya">Історія виникнення</a></li><li><a href="#avtor">Автор</a></li></ol>
+      </nav>
+   </div>
+</aside>
 
+    <article class="page__article">
+        <h1>Що таке SOLID?</h1>
+        <p>SOLID — це набір принципів дизайну і архітектури програмного забезпечення, що використовуються в об'єктно-орієнтованому програмуванні. Ці принципи допомагають розробникам створювати програмне забезпечення, яке є більш гнучким, легко підтримуваним і розширюваним. SOLID допомагає уникнути деяких загальних проблем у програмуванні, таких як жорсткість (складність змін), крихкість (легкість ламання коду при зміні) та надмірна складність.</p>
+<p>У сучасному світі розробки програмного забезпечення, де ми стикаємося зі зростаючою складністю та динамікою змін, принципи, як SOLID, відіграють ключову роль у управлінні цією складністю. Вони допомагають розробникам створювати адаптивні та легко підтримувані системи, що є вирішальним у швидко змінюваному технологічному середовищі.</p>
+<p>Кожна літера в акронімі SOLID відповідає одному принципу, який спрямований на підвищення якості та гнучкості програмного коду. Ці принципи служать як настанови для розробки якісних об'єктно-орієнтованих систем та допомагають уникати поганих практик проектування.</p>
+<p>Ці принципи були розроблені та сформульовані відомими експертами у галузі програмування, зокрема Робертом Мартіном, і стали важливою частиною сучасного розуміння ефективного програмування.</p>
+<p>Використання цих принципів у процесі розробки може значно покращити якість програмного продукту, забезпечуючи його легшу підтримку, тестування та розширення.</p>
+<h2 id="osnovni-princzipi" tabindex="-1">Основні Принципи <a class="header-anchor" href="#osnovni-princzipi">#</a></h2>
+<h3 id="s-princzip-yedinoyi-vidpovidalnosti" tabindex="-1">S - Принцип єдиної відповідальності <a class="header-anchor" href="#s-princzip-yedinoyi-vidpovidalnosti">#</a></h3>
+<p>(англ. Single Responsibility Principle)</p>
+<p>Кожен клас повинен мати лише одну причину для змін. Це означає, що кожен клас має виконувати лише одну задачу або нести відповідальність за одну частину функціональності програми.</p>
+<h3 id="o-princzip-vidkritosti-zakritosti" tabindex="-1">O - Принцип відкритості/закритості <a class="header-anchor" href="#o-princzip-vidkritosti-zakritosti">#</a></h3>
+<p>(англ. Open/Closed Principle)</p>
+<p>Класи (або модулі, функції тощо) мають бути відкритими для розширення, але закритими для зміни. Це означає, що можна додати нову функціональність, не змінюючи існуючий код.</p>
+<h3 id="l-princzip-pidstanovki-liskov" tabindex="-1">L - Принцип підстановки Лісков <a class="header-anchor" href="#l-princzip-pidstanovki-liskov">#</a></h3>
+<p>(англ. Liskov Substitution Principle)</p>
+<p>Об'єкти класу повинні мати можливість бути замененими об'єктами підкласів без впливу на коректність програми.</p>
+<h3 id="i-princzip-segregacziyi-interfejsiv" tabindex="-1">I - Принцип сегрегації інтерфейсів <a class="header-anchor" href="#i-princzip-segregacziyi-interfejsiv">#</a></h3>
+<p>(англ. Interface Segregation Principle)</p>
+<p>Клієнти не повинні бути змушені залежати від інтерфейсів, якими вони не користуються. Це означає створення специфічних інтерфейсів замість одного загального.</p>
+<h3 id="d-princzip-inversiyi-zalezhnostej" tabindex="-1">D - Принцип інверсії залежностей <a class="header-anchor" href="#d-princzip-inversiyi-zalezhnostej">#</a></h3>
+<p>(англ. Dependency Inversion Principle)</p>
+<p>Вищі рівні модулів не повинні залежати від нижчих рівнів, обидва типи повинні залежати від абстракцій. Тобто абстракції не повинні залежати від деталей, деталі мають залежати від абстракцій.</p>
+<h2 id="istoriya-viniknennya" tabindex="-1">Історія виникнення <a class="header-anchor" href="#istoriya-viniknennya">#</a></h2>
+<p>Історія SOLID у програмуванні є відображенням постійного розвитку практик та методологій у світі розробки програмного забезпечення. Сформульовані на початку 2000-х років Робертом Мартіном, відомим у професійному співтоваристві як &quot;Дядько Боб&quot;, ці принципи стали каменем спотикання у об'єктно-орієнтованому програмуванні (ООП) та вплинули на підходи до структуризації та архітектури програмного забезпечення.</p>
+<p>Роберт Мартін, який вже мав значний вплив у світі програмування через свої роботи та виступи, представив ці принципи як відповідь на зростаючу потребу у створенні більш гнучких, легко підтримуваних та розширюваних систем. Він бачив, що багато проектів стикаються з проблемами масштабування та утримання коду, тому вирішив створити набір принципів, які б допомогли розробникам уникнути цих пасток.</p>
+<p>З часом, SOLID принципи набули широкого визнання та прийняття у професійному співтоваристві. Вони вважаються одними з основних складових &quot;чистого коду&quot; та агільних методологій, відіграючи ключову роль у підвищенні якості та підтримуваності програмного забезпечення.</p>
+<p>Сьогодні, незважаючи на те, що принципи SOLID уже майже два десятиліття є частиною індустрії, їх значення та вплив залишаються незмінними. Розробники продовжують використовувати ці принципи для створення більш ефективних, масштабованих та легко модифікованих систем, підтверджуючи те, що хороші ідеї в індустрії програмного забезпечення є часовістестованими.</p>
+<h2 id="avtor" tabindex="-1">Автор <a class="header-anchor" href="#avtor">#</a></h2>
+<p>Роберт С. Мартін, відомий як &quot;Дядько Боб&quot;, є впливовою постаттю в світі програмування, особливо в агільному програмуванні та об'єктно-орієнтованому дизайні. Його внесок значний через десятиліття досвіду в розробці програмного забезпечення та авторство численних фахових книг.</p>
+<p><picture><source type="image/webp" srcset="assets/images/BGAeJKG0r4-300.webp 300w, assets/images/BGAeJKG0r4-860.webp 860w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="assets/images/BGAeJKG0r4-300.jpeg 300w, assets/images/BGAeJKG0r4-860.jpeg 860w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="Robert Martin" style="undefined" loading="lazy" decoding="async" src="assets/images/BGAeJKG0r4-300.jpeg" width="860" height="676"></picture></p>
+<p>Мартін розробив принципи SOLID, які спрямовані на покращення гнучкості та підтримуваності коду. Його ідеї вважаються важливими в індустрії, оскільки вони забезпечують стандартизований підхід до проектування програмного забезпечення, що допомагає уникати часто зустрічаних проблем. Його репутація та вплив у галузі роблять його думку та поради надійними і вагомими для програмістів на будь-якому етапі кар'єри.</p>
+
+    </article>
+</main>
+<footer class="page__footer footer">
+    <div class="container footer__container">
+        <a href="https://github.com/R2-D1/SOLID" class="github" target="_blank">
+            <img class="github__logo" width="35" height="35" src="/assets/images/icons/github.svg" alt="github">
+        </a>
+        <div class="footer__eleventy">
+            Працює на <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>
         </div>
-    </main>
+    </div>
+</footer>
+
 </body>
 </html>
