@@ -5,6 +5,14 @@ const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
 
+    // Define the accordion shortcode
+    eleventyConfig.addShortcode("accordion", function(title, content) {
+        return `<details>
+              <summary>${title}</summary>
+              <p>${content}</p>
+            </details>`;
+    });
+
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginTOC)
 
